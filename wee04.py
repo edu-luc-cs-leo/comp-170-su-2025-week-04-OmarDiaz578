@@ -1,5 +1,54 @@
 
 
+# Finds the shortest word 
+def shortest_word(words: list[str]) -> str:
+  #returns None if list is invalid
+  result = None 
+  if words:
+    #starts the loop on the first word and assumes its the shortest
+    result = words[0] 
+    #loops through every word on the list
+    for word in words:
+      # if the current word in the loop is shorter it replaces result
+      if len(word) < len(result):
+        result = word
+  #returns the shortest word or None 
+  return result
+#calls the function shortest_word
+print(shortest_word)
+
+# Finds the longest word 
+def longest_word(words: list[str]) -> str:
+  #returns None if list is invalid
+  result = None 
+  if words:
+    #starts the loop on the first word and assumes its the longest
+    result = words[0] 
+    #loops through every word on the list
+    for word in words:
+      # if the current word in the loop is longer it replaces result
+      if len(word) > len(result):
+        result = word
+  #returns the longest word or None 
+  return result
+
+#calls the function longest_word
+print(longest_word)
+
+def odd_words(words: list[str]) -> list[str]:
+  #returns None if list is invalid
+  result = None
+  if words:
+    result = []
+    for word in words: 
+      if len(word) % 2 != 0:
+        result.append(word)
+
+print(odd_words)
+
+
+
+
 #--------------------------------------------------------------------------------#
 # ⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎  WRITE YOUR CODE ABOVE THIS  LINE ⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎⬆︎
 
