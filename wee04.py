@@ -31,19 +31,26 @@ def longest_word(words: list[str]) -> str:
         result = word
   #returns the longest word or None 
   return result
-
 #calls the function longest_word
 print(longest_word)
 
+#Finds odd words
 def odd_words(words: list[str]) -> list[str]:
   #returns None if list is invalid
   result = None
+  #checks that there is an input
   if words:
+    #creates an empty list named result to store words with an odd number of characters
     result = []
+    #makes a loop to go through every word on the list
     for word in words: 
+      #checks if the word is odd by taking the remainder and dividing it by 2, if it's not zero its odd
       if len(word) % 2 != 0:
+        #adds the word to the empty list if it is odd
         result.append(word)
-
+  #returns the result list of odd words
+  return result
+#calls the function odd_words
 print(odd_words)
 
 
