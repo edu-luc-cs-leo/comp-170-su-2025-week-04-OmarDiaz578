@@ -34,7 +34,7 @@ def longest_word(words: list[str]) -> str:
 #calls the function longest_word
 print(longest_word)
 
-#Finds odd words
+# Finds odd words
 def odd_words(words: list[str]) -> list[str]:
   #returns None if list is invalid
   result = None
@@ -53,6 +53,50 @@ def odd_words(words: list[str]) -> list[str]:
 #calls the function odd_words
 print(odd_words)
 
+# Finds average words
+def average_words(words: list[str]) -> list[str]:
+  #returns None if list is invalid
+  result = None
+  #verifies that there's an input
+  if words and len(words) > 0:
+    #a placeholder for the total number of chracters
+    total = 0
+    #a placeholder for how many words are in the list
+    count = 0
+    # A loop to go trhough the words and calculate total length and count
+    for word in words:
+      #adds the length of the current word to total
+      total += len(word)
+      #increases word count by 1
+      count += 1
+    # This calculates the average length
+    average = total // count
+    # this creates an empty list were words whose length is +- 1 from the average length will be put
+    result = []
+    for word in words:
+      length = len(word)
+      if length == average -1 and length == average + 1:
+        result.append(word)
+  return result 
+#calls the function average_words 
+print(average_words)
+
+# Finds an intersection
+def intersect(foo: list[str], bar: list[str]) -> bool:
+  # start with an ssumption that there is no match so that it can change if there is one
+  result = False
+  # checks if both lists are valid
+  if foo and bar: 
+    #checks if the word is in the first list
+    for word in foo:
+      #checks if the word is also in the 2nd list
+      if word in bar:
+        # finds a match and statemnt switches to True
+        result = True 
+  # returns True if 1 match is found but False otherwise
+  return result
+#calls the function intersect
+print(intersect)
 
 
 
